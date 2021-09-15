@@ -7,6 +7,7 @@ export enum CustomMarket {
   proto_kovan = 'proto_kovan',
   proto_mainnet = 'proto_mainnet',
   proto_matic = 'proto_matic',
+  proto_avalanche = 'proto_avalanche',
   proto_mumbai = 'proto_mumbai',
   proto_fork = 'proto_fork',
   amm_kovan = 'amm_kovan',
@@ -190,6 +191,18 @@ export const marketsData: { [key in keyof typeof CustomMarket]: MarketDataType }
       LENDING_POOL: '0x76cc67FF2CC77821A70ED14321111Ce381C2594D',
       WETH_GATEWAY: '0x1648C14DbB6ccdd5846969cE23DeEC4C66a03335',
       FAUCET: '0x90E5BAc5A98fff59617080848959f44eACB4Cd7B',
+    },
+  },
+  [CustomMarket.proto_avalanche]: {
+    network: Network.avalanche,
+    logo: logos.aaveLogo,
+    activeLogo: logos.aaveActiveLogo,
+    subLogo: logos.avalanche,
+    aTokenPrefix: 'AV',
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: '0xd9F1e5F70B14b8Fd577Df84be7D75afB8a3A0186'.toLowerCase(),
+      LENDING_POOL: '0x4C179Faafe3B0D2413922d86F06f2BC83203cAC0',
+      WETH_GATEWAY: '0xD5050be4cB94f830799fC852cd44D1b9439855cB',
     },
   },
 } as const;

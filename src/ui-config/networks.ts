@@ -119,7 +119,7 @@ export const networkConfigs: { [key: string]: BaseNetworkConfig } = {
     rpcOnly: true,
     usdMarket: true,
     addresses: {
-      INCENTIVES_CONTROLLER: '0xa1EF206fb9a8D8186157FC817fCddcC47727ED55',
+      INCENTIVES_CONTROLLER: '0xd4eCF34187a52E755D44fca4d37aBe0b50724De2',
       INCENTIVES_CONTROLLER_REWARD_TOKEN: '0xd00ae08403b9bbb9124bb305c09058e32c39a48c',
     },
     bridge: {
@@ -128,6 +128,24 @@ export const networkConfigs: { [key: string]: BaseNetworkConfig } = {
       url: 'https://bridge.avax.network/',
       logo: avalancheBridgeLogo,
     },
+  },
+  [Network.avalanche]: {
+    publicJsonRPCUrl: 'https://api.avax.network/ext/bc/C/rpc',
+    publicJsonRPCWSUrl: 'wss://api.avax.network/ext/bc/C/rpc',
+    walletBalanceProvider: '0x9DacDe1034474904C2463eda506397E8f34E431D',
+    uiPoolDataProvider: '0xFADD20D7fA82DdBF85097E53DFffb2F19E58019e',
+    protocolDataUrl: '', // TODO: fill when subgraph deployed
+    baseUniswapAdapter: '0x0',
+    baseAsset: 'AVAX',
+    // incentives hardcoded information
+    rewardTokenSymbol: 'WAVAX',
+    rewardTokenAddress: API_ETH_MOCK_ADDRESS,
+    rewardTokenDecimals: 18,
+    incentivePrecision: 18,
+    explorerLink: 'https://cchain.explorer.avax.network/',
+    rpcOnly: true,
+    usdMarket: true,
+    bridgeUrl: 'https://bridge.avax.network/',
   },
   [Network.fork]: {
     ...mainnet_config,
