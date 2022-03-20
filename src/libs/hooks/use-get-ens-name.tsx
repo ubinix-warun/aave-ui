@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { ChainId } from '@aave/contract-helpers';
 import { getProvider } from '../../helpers/config/markets-and-network-config';
 
-const mainnetProvider = getProvider(ChainId.mainnet);
+const mainnetProvider = getProvider(ChainId.kovan);
+// const mainnetProvider = getProvider(ChainId.mainnet);
 
 const useGetEnsName = (address: string) => {
   const [ensName, setEnsName] = useState<string | null>(null);

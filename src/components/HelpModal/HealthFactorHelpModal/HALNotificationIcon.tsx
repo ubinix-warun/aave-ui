@@ -18,18 +18,18 @@ import bell from './images/bell.svg';
 const marketToHALAaveVersionUrlParam = (market: CustomMarket): string | undefined => {
   const exhaustCases = (_: never) => undefined;
   switch (market) {
-    case CustomMarket.proto_matic:
-      return 'aavepolygon';
-    case CustomMarket.proto_avalanche:
-      return 'aaveavalanche';
-    case CustomMarket.proto_mainnet:
-      return 'aavev2';
+    // case CustomMarket.proto_matic:
+    //   return 'aavepolygon';
+    // case CustomMarket.proto_avalanche:
+    //   return 'aaveavalanche';
+    // case CustomMarket.proto_mainnet:
+    //   return 'aavev2';
 
     case CustomMarket.proto_kovan:
-    case CustomMarket.proto_mumbai:
-    case CustomMarket.proto_fuji:
+    // case CustomMarket.proto_mumbai:
+    // case CustomMarket.proto_fuji:
     case CustomMarket.amm_kovan:
-    case CustomMarket.amm_mainnet:
+      // case CustomMarket.amm_mainnet:
       return undefined;
 
     default:
